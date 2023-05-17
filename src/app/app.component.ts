@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DbService } from './Services/db.service';
+import { album } from './models/album.models';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,12 @@ import { DbService } from './Services/db.service';
 export class AppComponent implements OnInit{
   constructor(private dbService: DbService){}
   
-  artists: any = [];
+  albums!: Array<album>;
   ngOnInit(): void {
-    this.dbService.getArtists().subscribe((v)=>{
-      this.artists = v;
+    this.dbService.getAlbums().subscribe((v)=>{
+      this.albums = v;
     })
-    console.log(this.artists);
+    console.log(this.albums);
   }
   
 
