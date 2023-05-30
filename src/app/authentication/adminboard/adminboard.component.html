@@ -1,0 +1,55 @@
+
+<div class="container">
+  <img src="../../../assets/admin.jpg">
+  <div class="wrapper">
+
+    
+    <!-- Accordion for admin  -->
+    <div ngbAccordion>
+      <div ngbAccordionItem [collapsed]="true">
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <span>Get all Users</span>
+          </button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              
+              <!-- Reads all users from database into table -->
+              <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Roles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{ user.username }}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{ user.roles | json }}</td>
+                </tbody>
+            </table>
+
+
+    
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+
+
+      
+
+    </div>
+
+    
+
+  </div>
+</div>

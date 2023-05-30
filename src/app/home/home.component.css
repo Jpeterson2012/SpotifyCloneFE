@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+}
+.mainpage{
+    margin-left: 70px;
+    background-color: burlywood;
+}
+.sidebar{
+    width: 170px;
+    height: 100vh;
+    background: linear-gradient(burlywood, black);
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    position: absolute;
+    /* margin-left: auto; */
+    width: 100%;
+    bottom: 0;
+}
